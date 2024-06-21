@@ -1022,7 +1022,8 @@ class _HashTagTextFieldState extends State<HashTagTextField>
       return effectiveDecoration.copyWith(
         errorText: effectiveDecoration.errorText ?? '',
         counterStyle: effectiveDecoration.errorStyle ??
-            themeData.textTheme.caption!.copyWith(color: themeData.errorColor),
+            themeData.textTheme.titleLarge!
+                .copyWith(color: themeData.primaryColor),
         counterText: counterText,
         semanticCounterText: semanticCounterText,
       );
@@ -1195,7 +1196,7 @@ class _HashTagTextFieldState extends State<HashTagTextField>
     final ThemeData theme = Theme.of(context);
     final TextSelectionThemeData selectionTheme =
         TextSelectionTheme.of(context);
-    final TextStyle style = theme.textTheme.subtitle1!.merge(widget.basicStyle);
+    final TextStyle style = theme.textTheme.bodySmall!.merge(widget.basicStyle);
     final Brightness keyboardAppearance =
         widget.keyboardAppearance ?? theme.brightness;
     final TextEditingController controller = _effectiveController;
